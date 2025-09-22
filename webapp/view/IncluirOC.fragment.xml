@@ -1,0 +1,16 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog id="dlgIncluirOC" title="PO-" draggable="true" resizable="true">
+        <VBox>
+            <Label text="Documento de Compra (Ebeln)"/>
+            <Input id="inputEbeln" width="100%" valueLiveUpdate="true"/>
+            <Label text="Item"/>
+            <Input id="inputEbelp" width="100%"/>
+        </VBox>
+        <beginButton>
+            <Button text="Confirmar" type="Emphasized" press="onConfirmarIncluirOC"/>
+        </beginButton>
+        <endButton>
+            <Button text="Cancelar" press="onCancelarIncluirOC"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

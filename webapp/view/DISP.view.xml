@@ -1,0 +1,55 @@
+<mvc:View controllerName="display.controller.DISP"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Table
+            id="afipTable"
+            mode="MultiSelect"
+             items="{/items}"
+            class="smallFontTable">
+            <columns>
+                <Column id="colIdAfip"><Text id="txtColIdAfip" text="ID AFIP"/></Column>
+                <Column id="colFlagmirofb60"><Text id="txtColFlagmirofb60" text="MIRO/FB60"/></Column>
+                <Column id="colEbeln"><Text id="txtColEbeln" text="Doc.Compras"/></Column>
+                <Column id="colEbelp"><Text id="txtColEbelp" text="Item"/></Column>
+                <Column id="colDiferenca"><Text id="txtColDiferenca" text="Cód. Autorização"/></Column>
+                <Column id="colMiroBelnr"><Text id="txtColMiroBelnr" text="Num.MIRO"/></Column>
+                <Column id="colMiroGjahr"><Text id="txtColMiroGjahr" text="MIRO Ano"/></Column>
+                <Column id="colFb60Belnr"><Text id="txtColFb60Belnr" text="Num.FB60"/></Column>
+                <Column id="colFb60Gjahr"><Text id="txtColFb60Gjahr" text="FB60 Ano"/></Column>
+                <Column id="colFlaglogs"><Text id="txtColFlaglogs" text="Logs"/></Column>
+                <Column id="colVersionAfip"><Text id="txtColVersionAfip" text="Versão"/></Column>
+                <Column id="colFlagestornar"><Text id="txtColFlagestornar" text="Estornar"/></Column>
+                <Column id="colFlagreprocessamento"><Text id="txtColFlagreprocessamento" text="Reprocesar"/></Column>
+            </columns>
+            <items>
+                <ColumnListItem id="cliAfip" type="Active">
+                    <cells>
+
+                        <Text id="txtIdAfip" text="{IdAfip}"/>
+                        <CheckBox id="chkFlagmirofb60" selected="{= ${Flagmirofb60} === 'X' }"/>
+                        <Text id="txtEbeln" text="{Ebeln}"/>
+                        <Text id="txtEbelp" text="{Ebelp}"/>
+                        <Text id="txtDiferenca" text="{Diferenca}"/>
+                        <Text id="txtMiroBelnr" text="{MiroBelnr}"/>
+                        <Text id="txtMiroGjahr" text="{MiroGjahr}"/>
+                        <Text id="txtFb60Belnr" text="{Fb60Belnr}"/>
+                        <Text id="txtFb60Gjahr" text="{Fb60Gjahr}"/>
+                        <Text id="txtFlaglogs" text="{Flaglogs}"/>
+                        <Text id="txtVersionAfip" text="{VersionAfip}"/>
+                        <CheckBox id="chkFlagestornar" selected="{Flagestornar}" select="onCheckBoxSelect"/>
+                        <CheckBox id="chkFlagreprocessamento" selected="{Flagreprocessamento}" select="onCheckBoxSelect"/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+        <footer>
+            <Bar id="footerBar">
+                <contentRight>
+                    <Button id="btnIncluirOC" text="Incluir Ordem de compra" type="Default" press="onIncluirOC"/>
+                    <Button id="btnSalvar" text="SALVAR" type="Emphasized" press="onSalvar"/>
+                </contentRight>
+            </Bar>
+        </footer>
+    </Page>
+</mvc:View>

@@ -1,0 +1,5 @@
+/* Enter your custom styles here */
+
+.smallFontTable .sapMText, .smallFontTable .sapMLabel, .smallFontTable .sapMColumnHeader, .smallFontTable .sapMCbLabel {
+	font-size: 80% !important;
+}
